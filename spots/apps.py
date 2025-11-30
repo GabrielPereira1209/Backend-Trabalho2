@@ -1,3 +1,4 @@
+# configuração do app spots
 from django.apps import AppConfig
 
 class SpotsConfig(AppConfig):
