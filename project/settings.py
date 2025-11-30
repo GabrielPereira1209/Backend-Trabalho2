@@ -1,15 +1,21 @@
+# importa módulos necessários
 import os
 from datetime import timedelta
 from pathlib import Path
 
+# define o diretório base do projeto
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# chave secreta do django
 SECRET_KEY = os.environ.get('DJANGO_SECRET', 'dev-secret')
 
+# ativa ou desativa o modo debug
 DEBUG = os.environ.get('DJANGO_DEBUG', '1') == '1'
 
+# hosts permitidos para acesso
 ALLOWED_HOSTS = ['*']
 
+ # apps instalados no projeto
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -26,6 +32,7 @@ INSTALLED_APPS = [
     'rentals',
 ]
 
+ # middlewares utilizados
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
@@ -37,8 +44,10 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# arquivo de urls principal
 ROOT_URLCONF = 'project.urls'
 
+ # configuração dos templates
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -55,8 +64,10 @@ TEMPLATES = [
     },
 ]
 
+# aplicação wsgi
 WSGI_APPLICATION = 'project.wsgi.application'
 
+ # configuração do banco de dados
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -64,19 +75,25 @@ DATABASES = {
     }
 }
 
+# validadores de senha
 AUTH_PASSWORD_VALIDATORS = []
 
+# configurações de internacionalização
 LANGUAGE_CODE = 'pt-br'
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
+# url dos arquivos estáticos
 STATIC_URL = '/static/'
 
+# campo padrão para chaves primárias
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# modelo de usuário customizado
 AUTH_USER_MODEL = 'users.User'
 
+ # configuração do rest framework
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
@@ -86,8 +103,10 @@ REST_FRAMEWORK = {
     ),
 }
 
+ # configuração do simple jwt
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(days=7),
 }
 
+# permite requisições de qualquer origem
 CORS_ALLOW_ALL_ORIGINS = True
