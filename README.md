@@ -1,8 +1,8 @@
 # Backend - Sistema de Gerenciamento de Locação de Vagas
 
 ## Integrantes
-** Gabriel Araujo - 2211136 **
-** Aviv Aharon - 2211745 **
+	**Gabriel Araujo - 2211136**
+	**Aviv Aharon - 2211745**
 
 ## Descrição do Projeto
 
