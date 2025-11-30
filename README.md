@@ -1,12 +1,18 @@
 # Backend - Sistema de Gerenciamento de Locação de Vagas
 
+---
+
 ## Integrantes
 - **Gabriel Araujo - 2211136**
 - **Aviv Aharon - 2211745**
 
-## Descrição do Projeto
+---
+
+## Descrição Geral
 
 Este backend foi desenvolvido em Django para gerenciar um sistema de locação de vagas. O sistema permite o cadastro de usuários, vagas e reservas, além de autenticação e autorização de usuários. O projeto implementa as operações CRUD para todas as entidades principais e conta com endpoints protegidos, documentação via Swagger e diferentes visões para usuários autenticados.
+
+---
 
 ## Escopo do Site
 
@@ -15,6 +21,8 @@ Este backend foi desenvolvido em Django para gerenciar um sistema de locação d
 - Endpoints protegidos para operações.
 - Endpoints liberados como registrar e login.
 - Documentação automática dos endpoints via Swagger.
+
+---
 
 ## Manual do Usuário
 
@@ -40,6 +48,7 @@ Este backend foi desenvolvido em Django para gerenciar um sistema de locação d
 	 - Acesse a documentação Swagger em: [http://127.0.0.1:8000/swagger/](http://127.0.0.1:8000/swagger/)
 	 - Pode utilizar o próprio swagger para testar as APIs.
 
+---
 
 ## O que funcionou
 
