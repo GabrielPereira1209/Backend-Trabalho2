@@ -21,7 +21,6 @@ Este backend foi desenvolvido em Django para gerenciar um sistema de locação d
 1. **Instalação**
 	 - Clone o repositório:
 		 git clone https://github.com/GabrielPereira1209/Backend-Trabalho2
-		 cd Backend-Trabalho2
 
 	 - Crie e ative um ambiente virtual:
 		 python3 -m venv venv
