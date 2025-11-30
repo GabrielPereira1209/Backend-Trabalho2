@@ -12,6 +12,8 @@
 
 Este backend foi desenvolvido em Django para gerenciar um sistema de locação de vagas. O sistema permite o cadastro de usuários, vagas e reservas, além de autenticação e autorização de usuários. O projeto implementa as operações CRUD para todas as entidades principais e conta com endpoints protegidos, documentação via Swagger e diferentes visões para usuários autenticados.
 
+Para acessar nosso backend postado está em: aviv03.pythonanywhere.com
+
 ---
 
 ## Escopo do Site
