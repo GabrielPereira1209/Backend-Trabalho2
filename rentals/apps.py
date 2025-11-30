@@ -1,3 +1,5 @@
+
+# configuração do app rentals
 from django.apps import AppConfig
 
 class RentalsConfig(AppConfig):

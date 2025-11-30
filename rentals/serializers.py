@@ -1,10 +1,10 @@
+# importa módulos necessários para serializers
 from rest_framework import serializers
-
 from .models import Rental
 from spots.serializers import SpotSerializer
 from spots.models import Spot
 
-
+# serializer para aluguel
 class RentalSerializer(serializers.ModelSerializer):
     spot = SpotSerializer(read_only=True)
     spot_id = serializers.PrimaryKeyRelatedField(queryset=Spot.objects.all(), write_only=True, source='spot')
@@ -15,6 +15,6 @@ class RentalSerializer(serializers.ModelSerializer):
         model = Rental
         fields = ['id','spot','spot_id','tenant','tenant_name','start_date','end_date','status','monthly_price']
         read_only_fields = ['tenant','tenant_name']
-
+    # sobrescreve método de criação
     def create(self, validated_data):
         return super().create(validated_data)
