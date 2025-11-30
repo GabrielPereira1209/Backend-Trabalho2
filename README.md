@@ -16,7 +16,7 @@ Este backend foi desenvolvido em Django para gerenciar um sistema de locação d
 
 1. **Instalação**
 	 - Clone o repositório:
-		 git clone [URL_DO_REPOSITORIO]
+		 git clone https://github.com/GabrielPereira1209/Backend-Trabalho2
 		 cd Backend-Trabalho2
 
 	 - Crie e ative um ambiente virtual:
@@ -28,9 +28,6 @@ Este backend foi desenvolvido em Django para gerenciar um sistema de locação d
 
 	 - Aplique as migrações:
 		 python manage.py migrate
-
-	 - Crie um superusuário (opcional, para acessar o admin):
-		 python manage.py createsuperuser
 
 	 - Inicie o servidor:
 		 python manage.py runserver
