@@ -1,3 +1,4 @@
+# serializers para usuário
 from rest_framework import serializers
 from .models import User
 
@@ -13,6 +14,7 @@ class RegisterSerializer(serializers.ModelSerializer):
         model = User
         fields = ['email','name','phone','user_type','password']
 
+    # sobrescreve método de criação
     def create(self, validated_data):
         password = validated_data.pop('password')
         user = User.objects.create_user(password=password, **validated_data)
