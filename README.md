@@ -1,33 +1,48 @@
-# Backend - Parking API
+# Backend - Sistema de Gerenciamento de Locação de Vagas
 
-This is a Django REST backend for the Parking project used by the frontend.
+## Descrição do Projeto
 
-Quick start (development):
+Este backend foi desenvolvido em Django para gerenciar um sistema de locação de vagas. O sistema permite o cadastro de usuários, vagas e reservas, além de autenticação e autorização de usuários. O projeto implementa as operações CRUD para todas as entidades principais e conta com endpoints protegidos, documentação via Swagger e diferentes visões para usuários autenticados.
 
-- Create a Python 3.12 venv and install requirements:
+## Escopo do Site
 
-```bash
-python3 -m venv .venv
-. .venv/bin/activate
-pip install -r requirements.txt
-python manage.py migrate
-python manage.py runserver 0.0.0.0:8000
-```
+- Cadastro, listagem, atualização e remoção de usuários, vagas e reservas (CRUD completo).
+- Autenticação de usuários (login/logout).
+- Endpoints protegidos para operações.
+- Endpoints liberados como registrar e login.
+- Documentação automática dos endpoints via Swagger.
 
-- Endpoints:
-  - `POST /api/auth/register` - register
-  - `POST /api/auth/login` - login (returns `access_token`)
-  - `GET /api/auth/me` - get current user
-  - `PUT /api/auth/profile` - update profile
-  - `POST /api/auth/change-password` - change password
-  - `POST /api/auth/forgot-password` - forgot password (demo)
-  - `GET /api/spots/` - list spots
-  - `POST /api/spots/` - create spot (auth)
-  - `GET /api/spots/my-spots/` - list current user's spots
-  - `GET /api/rentals/` - list rentals for user
-  - `POST /api/rentals/` - create rental
-  - `GET /swagger/` - API docs
+## Manual do Usuário
 
-Notes:
-- The project uses an SQLite DB by default for simplicity.
-- For sending real emails (forgot-password), configure email backend in `project/settings.py`.
+1. **Instalação**
+	 - Clone o repositório:
+		 git clone [URL_DO_REPOSITORIO]
+		 cd Backend-Trabalho2
+
+	 - Crie e ative um ambiente virtual:
+		 python3 -m venv venv
+		 source venv/bin/activate
+
+	 - Instale as dependências:
+		 pip install -r requirements.txt
+
+	 - Aplique as migrações:
+		 python manage.py migrate
+
+	 - Crie um superusuário (opcional, para acessar o admin):
+		 python manage.py createsuperuser
+
+	 - Inicie o servidor:
+		 python manage.py runserver
+
+2. **Uso**
+	 - Acesse a API em: [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+	 - Acesse a documentação Swagger em: [http://127.0.0.1:8000/swagger/](http://127.0.0.1:8000/swagger/)
+	 - Pode utilizar o próprio swagger para testar as APIs.
+
+## O que funcionou
+
+- CRUD completo para usuários, vagas e reservas.
+- Autenticação e autorização de usuários.
+- Endpoints protegidos.
+- Documentação Swagger acessível e funcional.
